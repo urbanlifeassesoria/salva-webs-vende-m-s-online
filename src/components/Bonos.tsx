@@ -18,7 +18,7 @@ const Bonos = () => {
           Bonos y PDFs incluidos
         </h2>
         <p className="text-center text-muted-foreground mb-10">
-          Con cualquiera de nuestros servicios, recibes:
+          Solo con el plan de Web + Anuncio, recibes:
         </p>
         <div className="space-y-6 mb-10">
           {bonos.map((b, i) => (

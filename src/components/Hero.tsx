@@ -52,7 +52,7 @@ const Hero = () => {
               Páginas web que venden, no solo se ven bonitas
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-6">
-              Diseño webs simples y rápidas para que tus clientes te escriban directo a WhatsApp. Planes desde $200.000 al año.
+              Diseño webs profesionales y rápidas para que clientes escriban directo a WhatsApp. Planes desde $200.000 al año.
             </p>
 
             <ul className="space-y-3 mb-8">
@@ -103,7 +103,7 @@ const Hero = () => {
                 <div>
                   <input
                     type="text"
-                    placeholder="Nombre completo *"
+                    placeholder="Nombre del negocio *"
                     value={form.nombre}
                     onChange={(e) => setForm({ ...form, nombre: e.target.value })}
                     className="w-full border border-input rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring bg-background"
