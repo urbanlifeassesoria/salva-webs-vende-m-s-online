@@ -1,13 +1,38 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+/* ============================================================
+   Index — Página principal de Salva Webs
+   Ensambla todas las secciones de la landing page.
+   ============================================================ */
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import ComoFunciona from "@/components/ComoFunciona";
+import Servicios from "@/components/Servicios";
+import Portafolio from "@/components/Portafolio";
+import Beneficios from "@/components/Beneficios";
+import Bonos from "@/components/Bonos";
+import FAQ from "@/components/FAQ";
+import FormularioCompleto from "@/components/FormularioCompleto";
+import Equipo from "@/components/Equipo";
+import Contacto from "@/components/Contacto";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <ComoFunciona />
+        <Servicios />
+        <Portafolio />
+        <Beneficios />
+        <Bonos />
+        <FAQ />
+        <FormularioCompleto />
+        <Equipo />
+        <Contacto />
+      </main>
+      <Footer />
+    </>
   );
 };
 
