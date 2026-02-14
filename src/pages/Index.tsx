@@ -24,11 +24,11 @@ const Index = () => {
         <ComoFunciona />
         <Servicios />
         <Portafolio />
+        <Equipo />
         <Beneficios />
         <Bonos />
         <FAQ />
         <FormularioCompleto />
-        <Equipo />
         <Contacto />
       </main>
       <Footer />

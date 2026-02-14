@@ -39,7 +39,7 @@ const Servicios = () => {
                 <ul className="space-y-1.5 text-sm text-muted-foreground">
                   {[
                     "Web de una página enfocada en ventas (máx. 16 productos/servicios)",
-                    "Subdominio de Salva Webs (ej: tunegocio.salvawebs.com)",
+                    "Subdominio en Vercel (ej: tunegocio.vercel.app)",
                     "Hosting incluido",
                     "Botones a WhatsApp y formulario conectado",
                   ].map((t, i) => (
@@ -73,7 +73,7 @@ const Servicios = () => {
               </div>
 
               <p className="text-xs text-muted-foreground">
-                Al año renovamos dominio, hosting y contenido contigo para mantener tu web actualizada.
+                Por solo $200.000 se renueva el hosting, dominio y contenido contigo para mantener tu web actualizada.
               </p>
 
               <a

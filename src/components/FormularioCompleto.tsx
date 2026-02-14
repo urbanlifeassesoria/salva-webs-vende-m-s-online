@@ -7,12 +7,21 @@ import { useState } from "react";
 import { CheckCircle } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/constants";
 
-const sectores = [
+const tiposNegocio = [
+  "Restaurante",
+  "Tienda física",
+  "Tienda online",
   "Veterinaria",
   "Escuela de conducción",
   "Eventos",
-  "Tienda",
   "Servicios profesionales",
+  "Salud / Belleza",
+  "Consultoría",
+  "Bienes raíces",
+  "Educación",
+  "Transporte / Logística",
+  "Tecnología",
+  "Construcción",
   "Otro",
 ];
 
@@ -119,12 +128,12 @@ const FormularioCompleto = () => {
               </div>
             </div>
 
-            {/* Sector */}
+            {/* Tipo de negocio */}
             <div>
-              <label className="block text-sm font-medium mb-1">Sector</label>
+              <label className="block text-sm font-medium mb-1">Tipo de negocio</label>
               <select value={form.sector} onChange={(e) => set("sector", e.target.value)} className={inputClass}>
                 <option value="">Selecciona</option>
-                {sectores.map((s) => <option key={s} value={s}>{s}</option>)}
+                {tiposNegocio.map((s) => <option key={s} value={s}>{s}</option>)}
               </select>
             </div>
 
@@ -140,20 +149,17 @@ const FormularioCompleto = () => {
               </div>
             </div>
 
-            {/* Dominio */}
+            {/* Logo */}
             <div>
-              <label className="block text-sm font-medium mb-1">¿Ya tienes dominio?</label>
+              <label className="block text-sm font-medium mb-1">¿Tienes logo?</label>
               <div className="flex gap-4 mt-1">
                 <label className="flex items-center gap-2 text-sm">
-                  <input type="radio" name="dominio" value="si" checked={form.tieneDominio === "si"} onChange={() => set("tieneDominio", "si")} /> Sí
+                  <input type="radio" name="logo" value="si" checked={form.tieneDominio === "si"} onChange={() => set("tieneDominio", "si")} /> Sí
                 </label>
                 <label className="flex items-center gap-2 text-sm">
-                  <input type="radio" name="dominio" value="no" checked={form.tieneDominio === "no"} onChange={() => set("tieneDominio", "no")} /> No
+                  <input type="radio" name="logo" value="no" checked={form.tieneDominio === "no"} onChange={() => set("tieneDominio", "no")} /> No
                 </label>
               </div>
-              {form.tieneDominio === "si" && (
-                <input type="text" value={form.dominio} onChange={(e) => set("dominio", e.target.value)} className={`${inputClass} mt-2`} placeholder="tudominio.com" />
-              )}
             </div>
 
             {/* Presupuesto */}
