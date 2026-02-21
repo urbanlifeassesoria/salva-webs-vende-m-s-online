@@ -15,12 +15,12 @@ const faqs = [
     respuesta: "El plan anual tiene una duración de 12 meses. Al cumplir el año, renovamos juntos el contenido, dominio y hosting para que tu web siga actualizada.",
   },
   {
-    pregunta: "¿Cuál es la diferencia entre el plan de $200.000 y el de $250.000?",
-    respuesta: "El plan de $200.000 incluye tu web con un subdominio de Salva Webs (ej: tunegocio.salvawebs.com). El de $250.000 incluye un dominio propio .com o .co registrado a tu nombre.",
+    pregunta: "¿Cuál es la diferencia entre el plan de $150.000 y el de $199.000?",
+    respuesta: "El plan de $150.000 incluye tu web con un subdominio en Vercel (ej: tunegocio.vercel.app). El de $199.000 incluye un dominio propio .com o .co registrado a tu nombre.",
   },
   {
-    pregunta: "¿Qué incluye el plan Web + Anuncio de $600.000 al mes?",
-    respuesta: "Incluye una landing específica para una oferta, un anuncio activo por 1 mes, embudo completo hacia WhatsApp y PDFs semanales con tips de contenido y guiones de respuesta.",
+    pregunta: "¿Qué incluye el plan Landing Page + Anuncio de $450.000 al mes?",
+    respuesta: "Incluye una landing page que vende, diseñada para una oferta específica, conectada a un anuncio activo por 1 mes. De los $450.000, $300.000 van directo a publicidad paga. Además recibes PDFs semanales con tips de contenido y guiones de respuesta.",
   },
   {
     pregunta: "¿Puedo hacer cambios después de publicar mi web?",

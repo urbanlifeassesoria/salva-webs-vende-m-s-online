@@ -6,6 +6,7 @@
 import { useState } from "react";
 import { MessageCircle, CheckCircle, ArrowDown } from "lucide-react";
 import { WHATSAPP_LINK, buildWhatsAppLink } from "@/lib/constants";
+import heroMockups from "@/assets/hero-mockups.png";
 
 // Opciones del select de tipo de negocio
 const tiposNegocio = [
@@ -43,7 +44,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="inicio" className="relative bg-gradient-to-br from-primary via-navy-light to-secondary pt-24 pb-16 md:pt-32 md:pb-24">
+    <section id="inicio" className="relative bg-gradient-to-br from-primary via-navy-light to-secondary pt-24 pb-8 md:pt-32 md:pb-12 overflow-hidden">
       <div className="container">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* Lado izquierdo — Promesa */}
@@ -52,7 +53,7 @@ const Hero = () => {
               Páginas web que venden, no solo se ven bonitas
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-6">
-              Diseño webs profesionales y rápidas para que clientes escriban directo a WhatsApp. Planes desde $200.000 al año.
+              Diseño webs profesionales y rápidas para que clientes escriban directo a WhatsApp. Planes desde $150.000 al año.
             </p>
 
             <ul className="space-y-3 mb-8">
@@ -146,6 +147,16 @@ const Hero = () => {
               </form>
             )}
           </div>
+        </div>
+
+        {/* Imagen mockup tipo landing — debajo del hero content */}
+        <div className="mt-12 md:mt-16">
+          <img
+            src={heroMockups}
+            alt="Ejemplos de páginas web profesionales creadas por Salva Webs"
+            className="w-full max-w-4xl mx-auto rounded-lg"
+            loading="eager"
+          />
         </div>
       </div>
     </section>
