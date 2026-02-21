@@ -32,7 +32,7 @@ const Servicios = () => {
               {/* Plan Subdominio */}
               <div className="border border-border rounded-lg p-4">
                 <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-2xl font-extrabold">$200.000</span>
+                  <span className="text-2xl font-extrabold">$150.000</span>
                   <span className="text-muted-foreground text-sm">/año</span>
                 </div>
                 <p className="font-semibold text-sm mb-2">Plan Subdominio</p>
@@ -55,7 +55,7 @@ const Servicios = () => {
               <div className="border-2 border-secondary rounded-lg p-4 relative">
                 <span className="absolute -top-3 left-4 bg-secondary text-secondary-foreground text-xs font-bold px-2 py-0.5 rounded">Recomendado</span>
                 <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-2xl font-extrabold">$250.000</span>
+                  <span className="text-2xl font-extrabold">$199.000</span>
                   <span className="text-muted-foreground text-sm">/año</span>
                 </div>
                 <p className="font-semibold text-sm mb-2">Plan Dominio Propio</p>
@@ -73,7 +73,7 @@ const Servicios = () => {
               </div>
 
               <p className="text-xs text-muted-foreground">
-                Por solo $200.000 se renueva el hosting, dominio y contenido contigo para mantener tu web actualizada.
+                Por solo $150.000 se renueva el hosting, dominio y contenido contigo para mantener tu web actualizada.
               </p>
 
               <a
@@ -91,19 +91,19 @@ const Servicios = () => {
           {/* Servicio 2 — Web + Anuncio */}
           <div className="bg-card border border-border rounded-xl overflow-hidden shadow-md">
             <div className="bg-secondary text-secondary-foreground p-6">
-              <h3 className="text-xl font-bold">Web + Anuncio</h3>
+              <h3 className="text-xl font-bold">Landing Page + Anuncio</h3>
               <p className="text-secondary-foreground/70 text-sm mt-1">Imán de clientes por 1 mes</p>
             </div>
             <div className="p-6 space-y-6">
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-3xl font-extrabold">$600.000</span>
+                <span className="text-3xl font-extrabold">$450.000</span>
                 <span className="text-muted-foreground text-sm">/mes</span>
               </div>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 {[
-                  "Landing específica para una sola oferta",
-                  "Anuncio activo durante 1 mes (ej: Meta Ads)",
-                  "Embudo completo: anuncio → WhatsApp → landing → formulario",
+                  "Landing page que vende, diseñada para una sola oferta",
+                  "Anuncio activo durante 1 mes (ej: Meta Ads) — $300.000 van directo a publicidad paga",
+                  "Embudo completo: anuncio → landing → WhatsApp → formulario",
                   "PDFs semanales con tips de contenido para redes y guiones de respuesta a nuevos leads",
                 ].map((t, i) => (
                   <li key={i} className="flex gap-2">
@@ -113,7 +113,7 @@ const Servicios = () => {
                 ))}
               </ul>
               <p className="text-xs text-muted-foreground bg-muted p-3 rounded-lg">
-                <strong>Nota:</strong> La landing de campaña y el anuncio están activos 1 mes. Si quieres dejar la web fija, se puede pasar a un plan anual.
+                <strong>Nota:</strong> Se entrega una landing page que vende, conectada a un anuncio activo durante 1 mes. De los $450.000, $300.000 se destinan a la publicidad paga del anuncio. Si quieres dejar la web fija, se puede pasar a un plan anual.
               </p>
 
               <a
@@ -123,7 +123,7 @@ const Servicios = () => {
                 className="flex items-center justify-center gap-2 w-full bg-yellow-cta text-accent-foreground font-bold py-3 rounded-lg hover:bg-yellow-cta-hover transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
-                Quiero la estrategia Web + Anuncio
+                Quiero la Landing Page + Anuncio
               </a>
             </div>
           </div>

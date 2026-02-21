@@ -25,7 +25,7 @@ const tiposNegocio = [
   "Otro",
 ];
 
-const presupuestos = ["$200.000", "$250.000", "$600.000", "No estoy seguro"];
+const presupuestos = ["$150.000", "$199.000", "$450.000", "No estoy seguro"];
 
 const FormularioCompleto = () => {
   const [form, setForm] = useState({
