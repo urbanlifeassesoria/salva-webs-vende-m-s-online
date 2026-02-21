@@ -34,8 +34,8 @@
     --muted: 220 20% 96%;
     --muted-foreground: 220 10% 40%;
 
-    /* Accent = amarillo CTA */
-    --accent: 45 95% 55%;
+    /* Accent = verde CTA */
+    --accent: 75 100% 50%;
     --accent-foreground: 220 50% 12%;
 
     /* Destructive */
@@ -53,8 +53,8 @@
     --navy: 220 50% 12%;
     --navy-light: 220 40% 18%;
     --blue-mid: 210 70% 45%;
-    --yellow-cta: 45 95% 55%;
-    --yellow-cta-hover: 45 95% 48%;
+    --yellow-cta: 75 100% 50%;
+    --yellow-cta-hover: 75 100% 43%;
     --gray-section: 220 20% 97%;
 
     /* Sidebar (no usados pero requeridos) */
