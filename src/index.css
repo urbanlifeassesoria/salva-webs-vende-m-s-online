@@ -1,63 +1,71 @@
+/* ============================================================
+   DESIGN SYSTEM — Salva Webs
+   Paleta: azul oscuro (navy), azul medio, verde neón CTA
+   Tipografía: Space Grotesk (display) + Inter (body)
+   
+   Para cambiar colores: editar las variables HSL aquí.
+   Para agregar colores: agregar variable + registrar en tailwind.config.ts
+   ============================================================ */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ============================================================
-   DESIGN SYSTEM — Salva Webs
-   Paleta: azul oscuro (navy), azul medio, amarillo CTA, blanco/gris
-   Tipografía: Inter
-   ============================================================ */
-
 @layer base {
   :root {
-    /* Fondos principales */
-    --background: 0 0% 100%;
+    /* ── Fondos principales ── */
+    --background: 220 20% 98%;
     --foreground: 220 40% 13%;
 
-    /* Tarjetas */
+    /* ── Tarjetas ── */
     --card: 0 0% 100%;
     --card-foreground: 220 40% 13%;
 
-    /* Popovers */
+    /* ── Popovers ── */
     --popover: 0 0% 100%;
     --popover-foreground: 220 40% 13%;
 
-    /* Primary = azul oscuro navy */
+    /* ── Primary = azul oscuro navy ── */
     --primary: 220 50% 12%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary = azul medio */
+    /* ── Secondary = azul medio ── */
     --secondary: 210 70% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Muted = gris claro */
+    /* ── Muted = gris claro ── */
     --muted: 220 20% 96%;
     --muted-foreground: 220 10% 40%;
 
-    /* Accent = verde CTA */
+    /* ── Accent = verde neón CTA (#bfff00) ── */
     --accent: 75 100% 50%;
     --accent-foreground: 220 50% 12%;
 
-    /* Destructive */
+    /* ── Destructive ── */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Bordes */
+    /* ── Bordes / Inputs ── */
     --border: 220 15% 90%;
-    --input: 220 15% 90%;
-    --ring: 210 70% 45%;
+    --input: 220 15% 85%;
+    --ring: 75 100% 50%;
 
-    --radius: 0.625rem;
+    --radius: 0.75rem;
 
-    /* Colores extra para secciones */
+    /* ── Colores extra para secciones ── */
     --navy: 220 50% 12%;
     --navy-light: 220 40% 18%;
+    --navy-mid: 220 35% 22%;
     --blue-mid: 210 70% 45%;
-    --yellow-cta: 75 100% 50%;
-    --yellow-cta-hover: 75 100% 43%;
+    --green-cta: 75 100% 50%;
+    --green-cta-hover: 75 100% 43%;
     --gray-section: 220 20% 97%;
 
-    /* Sidebar (no usados pero requeridos) */
+    /* ── Glassmorphism ── */
+    --glass-bg: 220 50% 12% / 0.6;
+    --glass-border: 0 0% 100% / 0.1;
+
+    /* ── Sidebar (requeridos por shadcn) ── */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -79,7 +87,45 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
+  }
+
+  /* ── Headings usan Space Grotesk ── */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+  }
+}
+
+/* ── Glassmorphism utility ── */
+@layer utilities {
+  .glass {
+    background: hsla(var(--glass-bg));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsla(var(--glass-border));
+  }
+
+  .glass-light {
+    background: hsla(0 0% 100% / 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsla(0 0% 100% / 0.12);
+  }
+
+  /* ── Gradiente de texto verde neón ── */
+  .text-gradient-green {
+    background: linear-gradient(135deg, hsl(75 100% 50%), hsl(85 100% 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Scroll snap para carrusel ── */
+  .snap-x-mandatory {
+    scroll-snap-type: x mandatory;
+  }
+  .snap-start {
+    scroll-snap-align: start;
   }
 }
