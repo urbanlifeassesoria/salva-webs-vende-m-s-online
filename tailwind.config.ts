@@ -1,8 +1,18 @@
+/* ============================================================
+   Tailwind Config — Salva Webs
+   Registra colores, animaciones y tipografía del design system.
+   Para agregar colores: añadir variable en index.css + registrar aquí.
+   ============================================================ */
 import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -13,9 +23,13 @@ export default {
       },
     },
     extend: {
+      /* ── Tipografía ── */
       fontFamily: {
         sans: ["Inter", "sans-serif"],
+        display: ["Space Grotesk", "Inter", "sans-serif"],
       },
+
+      /* ── Colores semánticos del design system ── */
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -50,17 +64,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Colores específicos de Salva Webs
+        /* Colores específicos Salva Webs */
         navy: {
           DEFAULT: "hsl(var(--navy))",
           light: "hsl(var(--navy-light))",
+          mid: "hsl(var(--navy-mid))",
         },
         "blue-mid": "hsl(var(--blue-mid))",
-        "yellow-cta": {
-          DEFAULT: "hsl(var(--yellow-cta))",
-          hover: "hsl(var(--yellow-cta-hover))",
+        "green-cta": {
+          DEFAULT: "hsl(var(--green-cta))",
+          hover: "hsl(var(--green-cta-hover))",
         },
         "gray-section": "hsl(var(--gray-section))",
+        /* Sidebar (requerido shadcn) */
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -72,11 +88,14 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+
+      /* ── Keyframes para animaciones ── */
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -87,14 +106,45 @@ export default {
           to: { height: "0" },
         },
         "fade-in-up": {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "0%": { opacity: "0", transform: "translateY(30px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        "fade-in-left": {
+          "0%": { opacity: "0", transform: "translateX(-30px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        "fade-in-right": {
+          "0%": { opacity: "0", transform: "translateX(30px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        "scale-in": {
+          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 20px 0px hsl(75 100% 50% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px 10px hsl(75 100% 50% / 0.5)" },
+        },
       },
+
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+        "fade-in-left": "fade-in-left 0.6s ease-out forwards",
+        "fade-in-right": "fade-in-right 0.6s ease-out forwards",
+        "scale-in": "scale-in 0.5s ease-out forwards",
+        float: "float 3s ease-in-out infinite",
+        shimmer: "shimmer 2s linear infinite",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
       },
     },
   },
