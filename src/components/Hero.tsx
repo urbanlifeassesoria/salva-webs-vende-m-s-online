@@ -12,7 +12,7 @@ import VideoPlaceholder from "./VideoPlaceholder";
 import heroMockups from "@/assets/hero-mockups.png";
 
 /* ── Cambiar estas URLs cuando los videos estén listos ── */
-const heroVideoSrc = ""; // TODO: URL del video del hero
+const heroVideoSrc = "/videos/hero-presentacion.mp4"; // TODO: URL del video del hero
 const heroPosterSrc = heroMockups; // Poster image del video
 
 /* ── Puntos de valor debajo del CTA ── */

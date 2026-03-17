@@ -13,7 +13,7 @@
    - aspectRatio: "video" (16:9) o "vertical" (9:16)
    ============================================================ */
 import { Play } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 interface Props {
   videoSrc?: string;
@@ -31,35 +31,40 @@ const VideoPlaceholder = ({
   aspectRatio = "video",
 }: Props) => {
   const [playing, setPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const ratio = aspectRatio === "vertical" ? "aspect-[9/16]" : "aspect-video";
+
+  // Set video to second 2 for preview
+  useEffect(() => {
+    if (videoRef.current && videoSrc && !playing) {
+      videoRef.current.currentTime = 2;
+    }
+  }, [videoSrc, playing]);
 
   /* ── Si hay video real, mostrar reproductor ── */
   if (videoSrc) {
     return (
       <div className={`relative rounded-xl overflow-hidden ${ratio} ${className}`}>
         {!playing ? (
-          /* Poster con botón play */
-          <button
-            onClick={() => setPlaying(true)}
-            className="w-full h-full relative group cursor-pointer"
-            aria-label="Reproducir video"
-          >
-            {posterSrc ? (
-              <img
-                src={posterSrc}
-                alt={label || "Video"}
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <div className="w-full h-full bg-navy-light" />
-            )}
-            {/* Overlay oscuro + botón play */}
-            <div className="absolute inset-0 bg-primary/40 flex items-center justify-center group-hover:bg-primary/50 transition-colors">
+          /* Video preview con primer frame + botón play */
+          <div className="w-full h-full relative group cursor-pointer">
+            <video
+              ref={videoRef}
+              src={videoSrc}
+              poster={playing ? posterSrc : undefined}
+              muted
+              playsInline
+              preload="auto"
+              className="w-full h-full object-cover"
+              onClick={() => setPlaying(true)}
+            />
+            {/* Overlay sutil + botón play */}
+            <div className="absolute inset-0 bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
               <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                 <Play className="w-7 h-7 text-accent-foreground ml-1" />
               </div>
             </div>
-          </button>
+          </div>
         ) : (
           /* Video reproduciéndose */
           <video

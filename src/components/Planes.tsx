@@ -45,7 +45,7 @@ const planes = [
       "Dominio incluido (plan $200k)",
     ],
     /* ── Video explicativo del plan ── */
-    videoSrc: "", // TODO: Reemplazar con URL del video
+    videoSrc: "/videos/presencia-web.mp4", // TODO: Reemplazar con URL del video
     videoLabel: "Te explico cuándo este plan sí te sirve",
     ctaTexto: "Quiero este plan",
     ctaLink: WHATSAPP_PLAN_PRESENCIA,
@@ -71,7 +71,7 @@ const planes = [
       "Capacitación en videollamada",
       "30 días de soporte",
     ],
-    videoSrc: "", // TODO: Reemplazar con URL del video
+    videoSrc: "/videos/web-autoadministrable.mp4", // TODO: Reemplazar con URL del video
     videoLabel: "Te explico por qué este plan te da más control",
     ctaTexto: "Quiero una web editable",
     ctaLink: WHATSAPP_PLAN_AUTOADMIN,
@@ -96,7 +96,7 @@ const planes = [
       "Acompañamiento 60 días WhatsApp",
       "Mentoría de marca y ventas",
     ],
-    videoSrc: "", // TODO: Reemplazar con URL del video
+    videoSrc: "/videos/clientes-al-instante.mp4", // TODO: Reemplazar con URL del video
     videoLabel: "Te explico por qué este plan acelera resultados",
     ctaTexto: "Quiero clientes más rápido",
     ctaLink: WHATSAPP_PLAN_CLIENTES,
@@ -122,7 +122,7 @@ const planes = [
       "Capacitación gestión de tienda",
       "30 días de soporte",
     ],
-    videoSrc: "", // TODO: Reemplazar con URL del video
+    videoSrc: "/videos/tienda-virtual.mp4", // TODO: Reemplazar con URL del video
     videoLabel: "Te explico si ya estás listo para vender online",
     ctaTexto: "Quiero mi tienda virtual",
     ctaLink: WHATSAPP_PLAN_TIENDA,
