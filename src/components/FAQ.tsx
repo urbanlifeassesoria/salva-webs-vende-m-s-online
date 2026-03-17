@@ -56,7 +56,7 @@ const FAQ = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
               Preguntas{" "}
-              <span className="text-gradient-green">frecuentes</span>
+              <span className="text-gradient-green-dark">frecuentes</span>
             </h2>
             <p className="text-muted-foreground">
               Si no encuentras tu respuesta, escríbeme directo por WhatsApp.

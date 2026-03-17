@@ -58,7 +58,7 @@ const Portafolio = () => {
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
               Webs que ya están{" "}
-              <span className="text-gradient-green">vendiendo mejor</span>
+              <span className="text-gradient-green-dark">vendiendo mejor</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
               No te vendo humo: aquí puedes ver ejemplos del tipo de trabajo que
