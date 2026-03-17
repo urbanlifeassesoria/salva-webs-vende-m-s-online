@@ -79,7 +79,7 @@ const FormularioCompleto = () => {
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
               ¿Listo para{" "}
-              <span className="text-gradient-green">tu nueva web?</span>
+              <span className="text-gradient-green-dark">tu nueva web?</span>
             </h2>
             <p className="text-muted-foreground">
               Cuéntame qué necesitas y te contacto por WhatsApp con una

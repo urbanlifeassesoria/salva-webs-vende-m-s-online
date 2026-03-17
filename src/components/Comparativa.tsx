@@ -51,7 +51,7 @@ const Comparativa = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
               ¿Cuál plan{" "}
-              <span className="text-gradient-green">te conviene?</span>
+              <span className="text-gradient-green-dark">te conviene?</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
               Compara rápido y decide sin vueltas.
