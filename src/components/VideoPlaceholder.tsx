@@ -34,11 +34,26 @@ const VideoPlaceholder = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const ratio = aspectRatio === "vertical" ? "aspect-[9/16]" : "aspect-video";
 
-  /* ── Poner preview en segundo 2 ── */
+  /* ── Poner preview en segundo 2 (espera a que el video esté listo) ── */
   useEffect(() => {
-    if (videoRef.current && videoSrc && !playing) {
-      videoRef.current.currentTime = 2;
+    const vid = videoRef.current;
+    if (!vid || !videoSrc || playing) return;
+
+    const setPreviewTime = () => {
+      vid.currentTime = 2;
+    };
+
+    /* Si la metadata ya cargó, setear directamente */
+    if (vid.readyState >= 1) {
+      setPreviewTime();
+    } else {
+      /* Si no, esperar al evento loadedmetadata */
+      vid.addEventListener("loadedmetadata", setPreviewTime, { once: true });
     }
+
+    return () => {
+      vid.removeEventListener("loadedmetadata", setPreviewTime);
+    };
   }, [videoSrc, playing]);
 
   /* ── Reproducir video directamente en el mismo elemento ── */
