@@ -10,7 +10,7 @@ import AnimateOnScroll from "./AnimateOnScroll";
 
 /* ── Imágenes de pasos ── */
 import imgWhatsapp from "@/assets/whatsapp.webp";
-import imgFacebook from "@/assets/facebook.jpg";
+import imgFacebook from "@/assets/eligiendo.avif";
 import imgDiseno from "@/assets/diseno-web.jpg";
 import imgPublicamos from "@/assets/publicamos.avif";
 
