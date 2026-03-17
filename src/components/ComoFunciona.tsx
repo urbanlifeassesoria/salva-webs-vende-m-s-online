@@ -10,6 +10,7 @@ import AnimateOnScroll from "./AnimateOnScroll";
 
 /* ── Imágenes de pasos ── */
 import imgWhatsapp from "@/assets/whatsapp.webp";
+import imgFacebook from "@/assets/facebook.jpg";
 import imgDiseno from "@/assets/diseno-web.jpg";
 import imgPublicamos from "@/assets/publicamos.avif";
 
@@ -25,7 +26,7 @@ const pasos = [
     icon: ListChecks,
     titulo: "2. Elegimos el plan ideal",
     texto: "Te recomiendo el plan que mejor se ajuste a tus objetivos y presupuesto.",
-    image: null,
+    image: imgFacebook,
   },
   {
     icon: PenTool,
